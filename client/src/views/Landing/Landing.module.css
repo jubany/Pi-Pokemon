@@ -34,8 +34,7 @@
     display: block;
     z-index: -1;
 }
-
-
+  
 .contentLeft  {
     display: flex;
     flex-direction: column;

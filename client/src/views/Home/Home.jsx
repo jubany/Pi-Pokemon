@@ -108,6 +108,7 @@ export default function Home(){
                     })
                 }
             </div>
+
             <div className={style.paginadoHome}>
                 <Paginado pokemonForPage={pokemonForPage} myPokemons={myPokemons.length} paginado={paginado}
                 />
