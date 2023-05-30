@@ -1,41 +1,61 @@
-.position{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 100px;
-    margin-top: 100px;
-    padding-top: -10px;
-    padding-bottom: 130px;
-    }
-  
-    .backGroundHome{
-      background-size: contain;
-    }
-  
-    .paginadoHome{
-      margin-bottom: 50px;
-    }
-  
-    .optionsHome{
-      display: flex;
-      justify-content: space-around;
-      margin-top: 2%;
-      margin-bottom: -100px;
-    }
-  
-    .filters{
-      border-radius: 10px;
-      padding: 0.8%;
-      border: none;
-      background-color: rgba(14, 13, 13, 0.685);
-      color: rgb(248, 246, 244);
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      cursor: pointer;
-    }
-  
-    .filters:hover{
-      box-shadow: 2px 2px 10px 10px  rgba(14, 13, 13, 0.685);
-      background-color: rgba(103, 22, 253, 0.658);
-      color: black;
-      font-size: 80%;
-    }
+.position {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 100px;
+  margin-top: 100px;
+  padding-top: -10px;
+  padding-bottom: 130px;
+}
+
+.backGroundHome {
+  background-size: contain;
+}
+
+.paginadoHome {
+  margin-bottom: 50px;
+}
+
+.optionsHome {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-bottom: -100px;
+}
+
+.filters {
+  border-radius: 10px;
+  padding: 0.8%;
+  border: none;
+  background-color: rgba(14, 13, 13, 0.685);
+  color: rgb(248, 246, 244);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+.filters:hover {
+  box-shadow: 2px 2px 10px 10px rgba(14, 13, 13, 0.685);
+  background-color: rgba(103, 22, 253, 0.658);
+  color: black;
+  font-size: 80%;
+}
+
+/* Estilos para el modo responsive */
+@media screen and (max-width: 768px) {
+  .optionsHome {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters {
+    margin-top: 10px;
+    width: 45%; /* Modifica el ancho a menos de la mitad */
+    max-width: 200px; /* Establece un ancho máximo para evitar que se expandan demasiado */
+    text-align: center; /* Centra el contenido del botón */
+  }
+
+  /* Estilos para el botón cuando está presionado */
+  .filters:active {
+    transform: scale(0.9); /* Reducción de escala para que el botón se vea más pequeño */
+  }
+}

@@ -17,7 +17,12 @@ export default function Home(){
 
     const [/*order*/, setOrder] = useState("")
     
-
+    const [filters, setFilters] = useState({
+        type: '',
+        attack: '',
+        alphabet: '',
+      });
+      
     const [currentPage, setCurrentPage] = useState(1)
     const [pokemonForPage, /*setPokemonForPage*/] = useState(12)
     const lastPokemon = currentPage * pokemonForPage;
@@ -43,24 +48,39 @@ export default function Home(){
         setOrder(e.target.value)
     }
 
-    function handleByType(e){
+    function handleByType(e) {
         e.preventDefault();
-        dispatch(filterByType(e.target.value))
-    }
-
-    function handleByAttack(e){
+        const type = e.target.value;
+        dispatch(filterByType(type));
+        setCurrentPage(1);
+        setFilters((prevFilters) => ({
+          ...prevFilters,
+          type: type,
+        }));
+      }
+      
+      function handleByAttack(e) {
         e.preventDefault();
-        dispatch(getPokemonByAttack(e.target.value))
-        setCurrentPage(1)//ponemelo en la pag 1
-        setOrder(e.target.value)//a ese estado local modificamelo para q desde el front me haga el ordenamiento
-    }
-
-    function handleByAlfaphetical(e){
+        const attack = e.target.value;
+        dispatch(getPokemonByAttack(attack));
+        setCurrentPage(1);
+        setFilters((prevFilters) => ({
+          ...prevFilters,
+          attack: attack,
+        }));
+      }
+      
+      function handleByAlfaphetical(e) {
         e.preventDefault();
-        dispatch(getPokemonByAlfavetic(e.target.value))
-        setCurrentPage(1)
-        setOrder(e.target.value)
-    }
+        const alphabet = e.target.value;
+        dispatch(getPokemonByAlfavetic(alphabet));
+        setCurrentPage(1);
+        setFilters((prevFilters) => ({
+          ...prevFilters,
+          alphabet: alphabet,
+        }));
+      }
+      
     
 
     return (

@@ -2,7 +2,6 @@ import React from 'react'
 import logo from "../../assets/img/International_Pokémon_logo.svg.webp"
 import icongithub from "../../assets/img/github.png"
 import iconlinkedin from "../../assets/img/linkedin.png"
-import iconFacebook from '../../assets/img/facebook2.png'
 import styles from "./Landing.module.css"
 import wanted from "../../assets/img/pokemon-yellow.png"
 import pikachu from '../../assets/img/pikachu.png'
@@ -20,16 +19,12 @@ const Landing = () => {
                     <p>Here you will find all the information about your favorite pokemons.</p>
                     <Link to="/home" className={styles.btnPrimary}>VISIT</Link>
                     <div className={styles.socialMedia}>
-                        <a href='#/'>
+                        <a href='https://github.com/jubany'>
                             <img src={icongithub} alt="icon github"/>
                         </a>
-                        <a href='#/'>
+                        <a href='https://www.linkedin.com/in/alejo-jubany-7a707519a/'>
                             <img src={iconlinkedin} alt="icon linkedin"/>
-                        </a>
-                        <a href='#/'>
-                            <img src={iconFacebook} alt="icon linkedin"/>
-                        </a>
-                        
+                        </a>                    
                     </div>
                     
                 </div>

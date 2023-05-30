@@ -1,87 +1,119 @@
 .content {
-    background-color: #f9f9f9;
-    justify-content: center;
-    display: flex;
+  background-color: #f9f9f9;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Agregado */
 }
 
 .card img {
-    height: 14rem;
-    width: auto;
+  height: 14rem;
+  width: auto;
+  max-width: 100%;
 }
 
 .card {
-    min-height: 200px;
-    width: 380px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-    margin: 20px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  min-height: 200px;
+  width: 380px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
+
 .card h1 {
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 700;
   color: rgb(26, 26, 26);
 }
+
 .card h3 {
-    background-color:lavender;
-    color: #FD841F;
-    padding: .8rem;
-    border-radius: 10px;
-    width: 20rem;
-    margin: 0;
-    font-size: 1rem;
+  background-color: lavender;
+  color: #fd841f;
+  padding: 0.8rem;
+  border-radius: 10px;
+  width: 20rem;
+  margin: 0;
+  font-size: 1rem;
 }
+
 .labelTypes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .cardInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .btnPrimary {
-   margin-top: 30px;
-    background-color: #FFCB05;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 0 18px;
-    line-height: 50px;
+  margin-top: 30px;
+  background-color: #ffcb05;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnPrimary:hover {
+  background-color: #fff;
+}
+.button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+
+.btnPrimary:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btnPrimary {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+  
+  .image-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    position: relative;
   }
-  
-  .btnPrimary:hover {
-    background-color: #fff;
-  }
-  
-  .btnPrimary:active {
-    box-shadow: #422800 2px 2px 0 0;
-    transform: translate(2px, 2px);
-  }
-  
-  @media (min-width: 768px) {
-      .btnPrimary {
-      min-width: 120px;
-      padding: 0 25px;
-    }
-  }   
+}

@@ -2,37 +2,29 @@
     min-height: 200px;
     width: 380px;
     background-color: beige;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     margin: 20px;
     text-align: center;
     border-radius: 10px;
     padding: 30px;
     display: flex;
     justify-content: space-around;
-}
-.card h1 {
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #FD841F;
-}
-.card h3 {
-    background-color: darkgrey;
-    color: #FD841F;
-    padding: .5rem;
-    border-radius: 10px;
-    width: 3.8rem;
-    margin: 0;
-}
-.labelTypes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-}
-
-.cardInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-}
+    transition: transform 0.3s;
+    position: relative; 
+  }
+  
+  .card:hover {
+    transform: scale(1.1); /* Aplica una escala de 1.1 al realizar hover */
+    z-index: 1; /* Agrega esta línea */
+  }
+  
+  .pokemonImage {
+    /* Estilos actuales de la imagen del Pokémon */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+  }
+  
+  .card:hover .pokemonImage {
+    transform: scale(1.2); /* Aplica una escala de 1.2 a la imagen al realizar hover en la tarjeta */
+    z-index: 2; /* Agrega esta línea */
+  }
+  

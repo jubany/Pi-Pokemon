@@ -118,3 +118,21 @@
    display: flex;
    flex-direction: column;
  }
+ /* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .boxForm {
+    flex-direction: column;
+  }
+
+  .boxForm > form {
+    width: 100%;
+  }
+
+  .boxForm > form > div {
+    width: 100%;
+  }
+
+  .boxForm > form select {
+    width: 100%;
+  }
+}
