@@ -9,12 +9,11 @@ const {
 const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-  dialectOptions: {
-    ssl: {
-      require:true,
-    }
+dialectOptions:{
+  ssl:{
+    require:true,
   }
-});
+}});
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -38,7 +37,6 @@ sequelize.models = Object.fromEntries(capsEntries);
 const { Pokemon, Type } = sequelize.models;
 
 // Aca vendrian las relaciones
-// Product.hasMany(Reviews);
 Pokemon.belongsToMany(Type, { through: 'PokemonType' });
 Type.belongsToMany(Pokemon, { through: 'PokemonType' });
 
