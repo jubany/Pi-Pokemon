@@ -13,31 +13,31 @@ export const CLEAN_STATE = "CLEAN_STATE"
 
 
 export const getAllPokemons = () => async dispatch => {
-    return fetch("http://localhost:3001/all")
+    return fetch("/all")
             .then(response => response.json())
             .then(data => dispatch({type: GET_ALL_POKEMONS, payload: data}))
 };
 export const getPokemonByName = (name) => async dispatch => {
-    return fetch(`http://localhost:3001/all?name=${name}`)
+    return fetch(`/all?name=${name}`)
             .then(response => response.json())
             .then(data => dispatch({type: GET_POKEMON_BY_NAME, payload: data}))
 };
 
 export const getPokemon = (id) => async dispatch => {
-    return fetch(`http://localhost:3001/pokemon/${id}`)
+    return fetch(`/pokemon/${id}`)
             .then(response => response.json())
             .then(data => dispatch({type: GET_POKEMON, payload: data}))
 };
 
 export const getPokemonsTypes = () => async dispatch =>{
-    return fetch("http://localhost:3001/types")
+    return fetch("/types")
            .then(responde => responde.json())
            .then(data => dispatch({type: GET_POKEMONS_TYPES, payload: data}))
 
 };
 
 export const createPokemon = (data)=> async dispatch =>{
-    return axios.post("http://localhost:3001/createPokemon", data)
+    return axios.post("/createPokemon", data)
     .then(response => dispatch({type: CREATE_POKEMON, payload: response.data}))
 }
 

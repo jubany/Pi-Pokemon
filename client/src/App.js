@@ -3,6 +3,9 @@ import Home from './views/Home/Home';
 import Landing from './views/Landing/Landing'
 import CreatePokemon from './views/CreatePokemon/CreatePokemon';
 import PokemonDetails from './views/PokemonDetails/PokemonDetails';
+import axios from 'axios'
+axios.defaults.baseURL = "http://localhost:3001"
+
 function App() {
   return (
     <Routes>
