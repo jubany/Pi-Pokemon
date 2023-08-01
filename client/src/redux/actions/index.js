@@ -13,31 +13,31 @@ export const CLEAN_STATE = "CLEAN_STATE"
 
 
 export const getAllPokemons = () => async dispatch => {
-    return fetch("/all")
+    return fetch("https://pi-pokemon-production-5cd4.up.railway.app/all")
             .then(response => response.json())
             .then(data => dispatch({type: GET_ALL_POKEMONS, payload: data}))
 };
 export const getPokemonByName = (name) => async dispatch => {
-    return fetch(`/all?name=${name}`)
+    return fetch(`https://pi-pokemon-production-5cd4.up.railway.app/all?name=${name}`)
             .then(response => response.json())
             .then(data => dispatch({type: GET_POKEMON_BY_NAME, payload: data}))
 };
 
 export const getPokemon = (id) => async dispatch => {
-    return fetch(`/pokemon/${id}`)
+    return fetch(`https://pi-pokemon-production-5cd4.up.railway.app/pokemon/${id}`)
             .then(response => response.json())
             .then(data => dispatch({type: GET_POKEMON, payload: data}))
 };
 
 export const getPokemonsTypes = () => async dispatch =>{
-    return fetch("/types")
+    return fetch("https://pi-pokemon-production-5cd4.up.railway.app/types")
            .then(responde => responde.json())
            .then(data => dispatch({type: GET_POKEMONS_TYPES, payload: data}))
 
 };
 
 export const createPokemon = (data)=> async dispatch =>{
-    return axios.post("/createPokemon", data)
+    return axios.post("https://pi-pokemon-production-5cd4.up.railway.app/createPokemon", data)
     .then(response => dispatch({type: CREATE_POKEMON, payload: response.data}))
 }
 

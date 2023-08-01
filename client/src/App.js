@@ -4,7 +4,7 @@ import Landing from './views/Landing/Landing'
 import CreatePokemon from './views/CreatePokemon/CreatePokemon';
 import PokemonDetails from './views/PokemonDetails/PokemonDetails';
 import axios from 'axios'
-axios.defaults.baseURL = "http://localhost:3001"
+axios.defaults.baseURL ='https://pi-pokemon-production-5cd4.up.railway.app/all'
 
 function App() {
   return (
